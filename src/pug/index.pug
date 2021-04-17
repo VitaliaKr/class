@@ -1,0 +1,53 @@
+extends layout/layout
+
+block vars
+    - var pageTitle = 'Главная страница'
+    - var pageBodyClass = 'homepage'
+    - var pageHeaderClass = ''
+
+block content
+    //- здесь код страницы
+    form.search-form(action="#")
+        input.search-form__field(type="search" placeholder="Введите запрос")
+        button.search-form__btn
+        //- psevdo
+    .center-cont
+        a.border-link(href#) Выберите нужный раздел
+ 
+        //- grids
+    .grid-cont
+        mixin grid-element(title, img)
+            .grid-element
+                .grid-element__title=title
+                a.grid-element__link(href="#")
+                    img.rid-element__img(src=img alt=title)
+        +grid-element('Блузки',"../assets/imgs/1.jpg")
+        +grid-element('Блузки',"../assets/imgs/2.jpg")
+        +grid-element('Блузки',"../assets/imgs/3.jpg")
+        +grid-element('Блузки',"../assets/imgs/4.jpg")
+        +grid-element('Блузки',"../assets/imgs/5.jpg")
+        +grid-element('Блузки',"../assets/imgs/6.jpg")
+        +grid-element('Блузки',"../assets/imgs/1.jpg")
+        +grid-element('Блузки',"../assets/imgs/1.jpg")
+        +grid-element('Блузки',"../assets/imgs/1.jpg")
+        +grid-element('Блузки',"../assets/imgs/1.jpg")
+
+
+
+    .swiper-wr
+        .swiper-container
+            .swiper-wrapper
+                .swiper-slide Slide 1
+                    img.img(src="https://www.sobaka.ru/images/post/00/09/75/23/_rotator.jpg?v=1570469047", alt="")
+                .swiper-slide Slide 2
+                    img.img(src="https://www.sobaka.ru/images/post/00/09/75/23/_rotator.jpg?v=1570469047", alt="")
+                .swiper-slide Slide 3
+                    img.img(src="https://www.sobaka.ru/images/post/00/09/75/23/_rotator.jpg?v=1570469047", alt="")
+                .swiper-slide Slide 3
+                    img.img(src="https://www.sobaka.ru/images/post/00/09/75/23/_rotator.jpg?v=1570469047", alt="")
+                .swiper-slide Slide 3
+                    img.img(src="https://www.sobaka.ru/images/post/00/09/75/23/_rotator.jpg?v=1570469047", alt="")
+
+            .swiper-pagination
+        .swiper-button-prev
+        .swiper-button-next
